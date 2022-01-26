@@ -16,7 +16,8 @@ namespace FunctionalPrograms
                     + "\n 2.Sum of three integers"
                     + "\n 3.Distance x and y"
                     + "\n 4.Quadratic Roots"
-                    + "\n 5.Exit");
+                    + "\n 5.Wind Chill"
+                    + "\n 6.Exit");
                 int option = Convert.ToInt32(Console.ReadLine());
                 switch (option)
                 {
@@ -37,6 +38,10 @@ namespace FunctionalPrograms
                         qaudratic.FindQuadratic();
                         break;
                     case 5:
+                        WindChill wchill = new WindChill();
+                        wchill.Weather();
+                        break;
+                    case 6:
                         flag = false;
                         break;
                     default: Console.WriteLine("Choose Correct option");
