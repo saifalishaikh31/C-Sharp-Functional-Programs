@@ -14,7 +14,9 @@ namespace FunctionalPrograms
             {
                 Console.WriteLine(" 1.Two Dimensional Array."
                     + "\n 2.Sum of three integers"
-                    + "\n 3.Exit");
+                    + "\n 3.Distance x and y"
+                    + "\n 4.Quadratic Roots"
+                    + "\n 5.Exit");
                 int option = Convert.ToInt32(Console.ReadLine());
                 switch (option)
                 {
@@ -26,11 +28,23 @@ namespace FunctionalPrograms
                         sumofthreeaddszero.FindTriplets();
                         flag = false;
                         break;
-                    default: Console.WriteLine("Choose Correct option");
+                    case 3:
+                        Distance distance = new Distance();
+                        distance.FindDistance();
                         break;
+                    case 4:
+                        Quadratic qaudratic = new Quadratic();
+                        qaudratic.FindQuadratic();
+                        break;
+                    case 5:
+                        flag = false;
+                        break;
+                    default: Console.WriteLine("Choose Correct option");
+                        break; 
+                       
                 }
-            }
-            Console.ReadLine();
+            } Console.ReadLine(); 
+           
         }
     }
 }
