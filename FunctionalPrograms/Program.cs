@@ -13,7 +13,8 @@ namespace FunctionalPrograms
             while (flag)
             {
                 Console.WriteLine(" 1.Two Dimensional Array."
-                    + "\n 2.Exit");
+                    + "\n 2.Sum of three integers"
+                    + "\n 3.Exit");
                 int option = Convert.ToInt32(Console.ReadLine());
                 switch (option)
                 {
@@ -21,6 +22,8 @@ namespace FunctionalPrograms
                         twodimarray.TwoDimArray();
                         break;
                     case 2:
+                        SumOfThreeAddsZero sumofthreeaddszero = new SumOfThreeAddsZero();
+                        sumofthreeaddszero.FindTriplets();
                         flag = false;
                         break;
                     default: Console.WriteLine("Choose Correct option");
