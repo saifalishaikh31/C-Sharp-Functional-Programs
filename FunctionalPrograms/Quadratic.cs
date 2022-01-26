@@ -11,6 +11,8 @@ namespace FunctionalPrograms
         public void FindQuadratic()
         {
 
+
+
             Console.WriteLine("Input value for a : ");
             a = Convert.ToInt32(Console.ReadLine());
             Console.WriteLine("Input value for b : ");
@@ -20,10 +22,24 @@ namespace FunctionalPrograms
 
             delta = (b * b - 4 * a * c);
             double sqrtdelta = Math.Sqrt(delta);
-            root1 = (-b + sqrtdelta) / 2 * a;
-            root2 = (-b - sqrtdelta) / 2 * a;
-            Console.WriteLine("Root 1 of x :" + (double)root1);
-            Console.WriteLine("Root 2 of x :" + (double)root2);
+
+            if (delta>0.0)
+            {
+                root1 = (-b + sqrtdelta) / 2 * a;
+                root2 = (-b - sqrtdelta) / 2 * a;
+                Console.WriteLine("Root 1 of x :" + (double)root1);
+                Console.WriteLine("Root 2 of x :" + (double)root2);
+            }
+           
+            else
+            {
+                Console.WriteLine("Roots are not real");
+            }
+
+            //root1 = (-b + sqrtdelta) / 2 * a;
+            //root2 = (-b - sqrtdelta) / 2 * a;
+            //Console.WriteLine("Root 1 of x :" + (double)root1);
+            //Console.WriteLine("Root 2 of x :" + (double)root2);
         }
     }
 }
